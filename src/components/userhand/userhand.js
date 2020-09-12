@@ -3,7 +3,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import DeckCard from '../deckcard/deckcard';
 
 function cardKey(card) {
-  return card.suit + card.value;
+  return card.suit + '_' + card.value;
 }
 
 class UserHand extends React.Component {

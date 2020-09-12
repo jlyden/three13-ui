@@ -11,7 +11,7 @@ function App() {
           Three13
         </Navbar.Brand>
       </Navbar>
-      <Table></Table>
+      <Table />
     </div>
   );
 }
