@@ -1,0 +1,25 @@
+https://reactjs.org/docs/thinking-in-react.html
+
+Let's say the 'API' returns userHand:
+[
+  { suit: "Hearts", value: 9 },
+  { suit: "Hearts", value: 10 },
+  { suit: "Hearts", value: 11 },
+  { suit: "Diamonds", value: 9 },      
+]
+
+See 313-spec.png for very rough look of UI
+Actions:
+ - user clicks deck to draw from deck
+ - user clicks face up card to draw that
+ - user drags discard to face up pile to discard 
+ - user clicks go-out button, then drags discard to go out 
+
+Components:
+ - UserHand of Cards
+   - Set of Cards (within UserHand) 
+    - Card 
+ - Face-up Card/Discard 'Pile'
+ - Other UsersHands (not visible)
+ - Deck 
+
