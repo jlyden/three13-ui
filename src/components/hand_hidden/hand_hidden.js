@@ -1,17 +1,17 @@
 import React from 'react';
 import CardGroup from 'react-bootstrap/CardGroup';
-import OtherCard from '../othercard/othercard';
+import CardFaceDown from '../card_face_down/card_face_down';
 
 function cardKey(user, index) {
   return user + '_' + index;
 }
 
-class OtherHand extends React.Component {
+class HandHidden extends React.Component {
   render() {
     const displayCards = [];
     for(let i=0; i<this.props.count; i++){
       displayCards.push(
-        <OtherCard flex={this.props.flex} key={cardKey(this.props.user, i)} />
+        <CardFaceDown flex={this.props.flex} key={cardKey(this.props.user, i)} />
       );
     }
 
@@ -25,4 +25,4 @@ class OtherHand extends React.Component {
   }
 }
 
-export default OtherHand;
+export default HandHidden;

@@ -1,11 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import './othercard.css';
+import './card_face_down.css';
 
-class OtherCard extends React.Component {
+class CardFaceDown extends React.Component {
   render() {
-    let className = 'othercard ' + this.props.flex;
+    let className = 'card-face-down ' + this.props.flex;
 
     return (
       <Card className={className}>
@@ -15,4 +15,4 @@ class OtherCard extends React.Component {
   }
 }
 
-export default OtherCard;
+export default CardFaceDown;

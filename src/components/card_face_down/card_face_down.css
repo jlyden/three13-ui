@@ -1,4 +1,4 @@
-.othercard {
+.card-face-down {
   width: 4rem;
   height: 4rem;
   background-color: #6495ED;
@@ -11,5 +11,5 @@
 }
 
 .row {
-  height: 6rem;
+  height: 8rem;
 }

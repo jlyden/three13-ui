@@ -3,8 +3,8 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import DeckCard from '../deckcard/deckcard';
-import OtherCard from '../othercard/othercard';
+import CardFaceUp from '../card_face_up/card_face_up';
+import CardFaceDown from '../card_face_down/card_face_down';
 
 function cardKey(card) {
   return card.suit + '_' + card.value;
@@ -18,8 +18,8 @@ class DrawArea extends React.Component {
       <Row>
         <Col>
           <CardGroup>
-            <OtherCard />
-            <DeckCard card={card} key={cardKey(card)} />
+            <CardFaceDown flex='row' />
+            <CardFaceUp card={card} key={cardKey(card)} />
           </CardGroup>
         </Col>
       </Row>

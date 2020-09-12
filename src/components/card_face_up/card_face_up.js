@@ -1,14 +1,14 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import './deckcard.css';
+import './card_face_up.css';
 
-class DeckCard extends React.Component {
+class CardFaceUp extends React.Component {
   render() {
     const card = this.props.card;
 
     return (
-      <Card className='deckcard'>
+      <Card className='card-face-up'>
         <Card.Body>
           <Card.Title>
             {card.value} of {card.suit}
@@ -19,4 +19,4 @@ class DeckCard extends React.Component {
   }
 }
 
-export default DeckCard;
+export default CardFaceUp;

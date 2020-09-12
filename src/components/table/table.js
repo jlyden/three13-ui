@@ -3,9 +3,9 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import DrawArea from '../drawarea/drawarea';
-import OtherHand from '../otherhand/otherhand';
-import UserHand from '../userhand/userhand';
+import DrawArea from '../draw_area/draw_area';
+import HandHidden from '../hand_hidden/hand_hidden';
+import HandVisible from '../hand_visible/hand_visible';
 import './table.css';
 
 class Table extends React.Component {
@@ -13,29 +13,30 @@ class Table extends React.Component {
     return (
       <Container className='table'>
         <Row className="justify-content-md-center">
-          <Col md={3} xs={2} />
-          <Col>
-            <OtherHand user='four' count={round} flex='row'></OtherHand>
+          <Col />
+          <Col xs={6}>
+            <HandHidden user='four' count={round} flex='row'></HandHidden>
           </Col>
-          <Col md={3} xs={2} />
+          <Col />
         </Row>
-        <Row></Row>
         <Row>
-          <Col md={2} xs={1}>
-            <OtherHand user='two' count={round} flex='column'></OtherHand>
+          <Col>
+            <HandHidden user='two' count={round} flex='column'></HandHidden>
           </Col>
-          <Col md={2} xs={1} />
-          <Col md={4} xs={8}>
+          <Col xs={8}>
             <DrawArea faceCard={faceCard} />
           </Col>
-          <Col md={2} xs={1} />
-          <Col md={2} xs={1}>
-            <OtherHand user='three' count={round} flex='column'></OtherHand>
+          <Col>
+            <HandHidden user='three' count={round} flex='column'></HandHidden>
           </Col>
         </Row>
         <Row></Row>
         <Row className="justify-content-md-center">
-          <UserHand handOfCards={thisUserHand} />
+          <Col />
+          <Col xs={6}>
+            <HandVisible handOfCards={thisUserHand} />
+          </Col>
+          <Col />
         </Row>
       </Container>
     )
