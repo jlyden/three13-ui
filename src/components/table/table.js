@@ -3,40 +3,25 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import { DrawArea } from '../draw_area/draw_area';
-import { HandHidden, HandVisible } from '../hand/hand';
+import { RegionDeck } from '../regions/deck/deck';
+import { RegionOtherUser } from '../regions/other_user/other_user';
+import { RegionUser } from '../regions/user/user';
 import './table.css';
 
 export class Table extends React.Component {
   render() {
     return (
       <Container className='table'>
-        <Row className="justify-content-xs-center">
-          <Col />
-          <Col xs={6}>
-            <HandHidden user='four' count={round} flex='row'></HandHidden>
-          </Col>
-          <Col />
-        </Row>
+        <RegionOtherUser location='top' user='four' count={round} />
         <Row>
-          <Col>
-            <HandHidden xs={{ order: 'first' }} user='two' count={round} flex='column'></HandHidden>
-          </Col>
-          <Col xs={4}>
-            <DrawArea faceCard={faceCard} />
-          </Col>
-          <Col xs={{ order: 'last' }}>
-            <HandHidden user='three' count={round} flex='column'></HandHidden>
-          </Col>
+          <RegionOtherUser location='left' user='two' count={round} />
+          <Col xs={2} />
+          <RegionDeck faceCard={faceCard} />
+          <Col xs={2} />
+          <RegionOtherUser location='right' user='three' count={round} />
         </Row>
         <Row></Row>
-        <Row className="justify-content-xs-center">
-          <Col />
-          <Col xs={6}>
-            <HandVisible handOfCards={thisUserHand} />
-          </Col>
-          <Col />
-        </Row>
+        <RegionUser handOfCards={thisUserHand} />
       </Container>
     )
   }
