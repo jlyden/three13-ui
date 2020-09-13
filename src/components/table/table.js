@@ -15,9 +15,9 @@ export class Table extends React.Component {
         <RegionOtherUser location='top' user='four' count={round} />
         <Row>
           <RegionOtherUser location='left' user='two' count={round} />
-          <Col xs={2} />
+          <Col xs={3} />
           <RegionDeck faceCard={faceCard} />
-          <Col xs={2} />
+          <Col xs={3} />
           <RegionOtherUser location='right' user='three' count={round} />
         </Row>
         <Row></Row>

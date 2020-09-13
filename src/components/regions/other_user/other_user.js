@@ -23,7 +23,7 @@ export class RegionOtherUser extends React.Component {
 
   renderCol(order) {
     return (
-      <Col xs={{ size: 2, order: order }}>
+      <Col xs={{ size: 1, order: order }}>
         <HandHidden
           user={this.props.user}
           count={this.props.count}
