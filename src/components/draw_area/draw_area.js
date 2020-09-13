@@ -3,14 +3,13 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import CardFaceUp from '../card_face_up/card_face_up';
-import CardFaceDown from '../card_face_down/card_face_down';
+import { CardFaceUp, CardFaceDown } from '../card/card';
 
 function cardKey(card) {
   return card.suit + '_' + card.value;
 }
 
-class DrawArea extends React.Component {
+export class DrawArea extends React.Component {
   render() {
     const card = this.props.faceCard;
 
@@ -26,5 +25,3 @@ class DrawArea extends React.Component {
     );
   }
 }
-
-export default DrawArea;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 
-import Table from '../table/table';
+import { Table } from '../table/table';
 
 function App() {
   return (

@@ -3,16 +3,15 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import DrawArea from '../draw_area/draw_area';
-import HandHidden from '../hand_hidden/hand_hidden';
-import HandVisible from '../hand_visible/hand_visible';
+import { DrawArea } from '../draw_area/draw_area';
+import { HandHidden, HandVisible } from '../hand/hand';
 import './table.css';
 
-class Table extends React.Component {
+export class Table extends React.Component {
   render() {
     return (
       <Container className='table'>
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-xs-center">
           <Col />
           <Col xs={6}>
             <HandHidden user='four' count={round} flex='row'></HandHidden>
@@ -21,17 +20,17 @@ class Table extends React.Component {
         </Row>
         <Row>
           <Col>
-            <HandHidden user='two' count={round} flex='column'></HandHidden>
+            <HandHidden xs={{ order: 'first' }} user='two' count={round} flex='column'></HandHidden>
           </Col>
-          <Col xs={8}>
+          <Col xs={4}>
             <DrawArea faceCard={faceCard} />
           </Col>
-          <Col>
+          <Col xs={{ order: 'last' }}>
             <HandHidden user='three' count={round} flex='column'></HandHidden>
           </Col>
         </Row>
         <Row></Row>
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-xs-center">
           <Col />
           <Col xs={6}>
             <HandVisible handOfCards={thisUserHand} />
@@ -54,5 +53,3 @@ const thisUserHand = [
 const round = thisUserHand.length;
 
 const faceCard = { suit: 'Diamonds', value: 5 };
-
-export default Table;
