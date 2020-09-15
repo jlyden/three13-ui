@@ -1,5 +1,5 @@
 import React from 'react';
-import CardDeck from 'react-bootstrap/CardDeck';
+import CardGroup from 'react-bootstrap/CardGroup';
 
 import { CardFaceUp, CardFaceDown } from '../card/card';
 
@@ -8,16 +8,14 @@ export class HandHidden extends React.Component {
     const displayCards = [];
     for(let i=0; i<this.props.count; i++){
       displayCards.push(
-        <CardFaceDown flex={this.props.flex} user={this.props.user} index={i} />
+        <CardFaceDown user={this.props.user} index={i} />
       );
     }
 
-    let className = 'flex-' + this.props.flex;
-
     return (
-      <CardDeck className={className}>
+      <CardGroup>
         {displayCards}
-      </CardDeck>
+      </CardGroup>
     );
   }
 }
@@ -33,9 +31,9 @@ export class HandVisible extends React.Component {
     });
 
     return (
-      <CardDeck>
+      <CardGroup>
         {displayCards}
-      </CardDeck>
+      </CardGroup>
     );
   }
 }

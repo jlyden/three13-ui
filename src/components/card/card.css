@@ -1,11 +1,10 @@
-.card-face-up {
-  width: 6rem;
+.card {
+  width: 4rem;
   height: 8rem;
+  margin-top: 2rem;
 }
 
-.card-face-down {
-  width: 4rem;
-  height: 4rem;
+.card-back {
   background-color: #6495ED;
   background-image:
     repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
@@ -15,6 +14,6 @@
   background-size: 70px 120px;
 }
 
-.row {
-  height: 8rem;
+.small {
+  height: 6rem;
 }

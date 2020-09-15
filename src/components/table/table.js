@@ -1,5 +1,4 @@
 import React from 'react';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
@@ -12,15 +11,13 @@ export class Table extends React.Component {
   render() {
     return (
       <Container className='table'>
-        <RegionOtherUser location='top' user='four' count={round} />
         <Row>
-          <RegionOtherUser location='left' user='two' count={round} />
-          <Col xs={3} />
-          <RegionDeck faceCard={faceCard} />
-          <Col xs={3} />
-          <RegionOtherUser location='right' user='three' count={round} />
+          <RegionOtherUser order='first' user='two' count={round} />
+          <RegionOtherUser order='null' user='three' count={round} />
+          <RegionOtherUser order='last' user='four' count={round} />
         </Row>
-        <Row></Row>
+        <RegionDeck faceCard={faceCard} />
+        <Row />
         <RegionUser handOfCards={thisUserHand} />
       </Container>
     )

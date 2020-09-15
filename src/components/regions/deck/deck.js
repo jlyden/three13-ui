@@ -1,20 +1,25 @@
 import React from 'react';
-import CardDeck from 'react-bootstrap/CardDeck';
+import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
-import { CardFaceUp, CardFaceDown } from '../../card/card';
+import { CardFaceUp, DeckFaceDown } from '../../card/card';
 
 export class RegionDeck extends React.Component {
   render() {
     const card = this.props.faceCard;
 
     return (
-      <Col xs={4}>
-        <CardDeck>
-          <CardFaceDown flex='row' />
-          <CardFaceUp card={card} />
-        </CardDeck>
-      </Col>
+      <Row>
+        <Col xs={4}/>
+        <Col xs={3}>
+          <CardGroup>
+            <DeckFaceDown/>
+            <CardFaceUp card={card} />
+          </CardGroup>
+        </Col>
+        <Col xs={5}/>
+      </Row>
     );
   }
 }
